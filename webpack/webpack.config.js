@@ -4,14 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 
-const outputPath = path.join(__dirname, "/../dist");
+const outputPath = path.join(__dirname, "../dist");
 const outputAssetPath = path.join(outputPath, "/assets");
 const outputAssetCssPath = path.join(outputAssetPath, "/css");
 const outputAssetJsPath = path.join(outputAssetPath, "/js");
 const outputAssetImgPath = path.join(outputAssetPath, "/image");
 
 module.exports = {
-    entry: path.join(__dirname, "/index.jsx"),
+    entry: path.join(__dirname, "/../src/index.jsx"),
     output: {
         path: outputPath,
         filename: "bundle.js",
