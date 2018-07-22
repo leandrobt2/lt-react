@@ -50,6 +50,19 @@ module.exports = {
             {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 loader: 'file-loader?name=public/fonts/[name].[ext]'
+            },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/,
+                use: [
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true, // webpack@1.x
+                            disable: true, // webpack@2.x and newer
+                        },
+                    },
+                ]
             }
         ]
     },
@@ -64,8 +77,8 @@ module.exports = {
             template: path.join(__dirname, '/template.html')
         })
         // new CopyWebpackPlugin([
-        //     { from: 'node_modules/bootstrap/dist/js/bootstrap.min.js', to: outputAssetJsPath },
-        //     { from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: outputAssetCssPath }
+        //     //{ from: 'src/assets/image', to: outputAssetImgPath }
+        //     //{ from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: outputAssetCssPath }
         // ]),
         // new HtmlWebpackIncludeAssetsPlugin({
         //     assets: ['assets/js/bootstrap.min.js', 'assets/css/bootstrap.min.css'],
