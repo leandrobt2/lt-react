@@ -14,6 +14,7 @@ import './assets/style/main.css';
 import './assets/style/style.css';
 import './assets/style/responsive.css';
 import './assets/style/red.css';
+import './assets/style/preloader.css';
 
 const render = () => {
   ReactDOM.render(<MasterPage />, document.getElementById("app"));

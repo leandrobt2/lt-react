@@ -1,16 +1,8 @@
 import React from "react";
-import logo from '../../assets/image/logo.png';
+import logo from '../../assets/image/imageedit_4_5380735982.png';
 import Countdown from 'react-countdown-now';
-
-const renderer = ({ days, hours, minutes, seconds, completed }) => {
-    if (completed) {
-        // Render a completed state
-        return <div>DONE</div>
-    } else {
-        // Render a countdown
-        return <CustomCountdownComponent days={days} hours={hours} minutes={minutes} seconds={seconds} />
-    }
-};
+import { Navbar, Nav, NavItem, Button } from 'react-bootstrap';
+import $ from 'jquery';
 
 class HeaderComponent extends React.Component {
     constructor(props) {
@@ -18,59 +10,51 @@ class HeaderComponent extends React.Component {
 
         this.state = {
             height: 0,
-            top: 0
+            top: 0,
+            heigthNav: 0
         };
     }
 
     render() {
         return (
             <header className="header-background header" id="header" data-stellar-background-ratio="0.5">
-                <div className="fix header-overlay overlay-color" style={
-                    {
-                        paddingTop: this.state.top + 'px',
-                        paddingBotton: this.state.top - this.state.height + 'px',
-                        position: 'relative'
-                    }
-                }>
+                <div className="fix header-overlay overlay-color">
 
-                    <div className="header-navbar navbar-fixed-top" id="header-navbar">
-                        <nav className="navbar navbar-inverse">
-                            <div className="container">
-                                <div className="navbar-header">
-
-                                    <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                        <span className="icon-bar icon-close-1"></span>
-                                        <span className="icon-bar"></span>
-                                        <span className="icon-bar icon-close-2"></span>
-                                    </button>
-
-                                    <a className="navbar-brand" href="index.html">
-                                        <img src={logo} className="img-responsive" alt="" />
-                                    </a>
-
-                                </div>
-
-
-                                <button type="button" className="navbar-toggle navbar-cus hidden-xs " id="navbar-cus">
-                                    <span className="lines"></span>
-                                </button>
-
-                                <div id="myNavbar">
-                                    <ul id="navbar-nav" className="myNavbarUl nav navbar-nav navbar-right slideOutRight">
-                                        <li><a href="#header">Home</a></li>
-                                        <li><a href="#section-1">About</a></li>
-                                        <li><a href="#section-3">Scedule</a></li>
-                                        <li><a href="#section-5">Price</a></li>
-                                        <li><a href="#section-11">Venue</a></li>
-                                        <li><a href="blog.html" className="blog">Blog</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
+                    <div className="header-navbar navbar-fixed-top" id="header-navbar" ref="headerNavbar">
+                        <Navbar collapseOnSelect inverse id="mainNavBar">
+                            <Navbar.Header>
+                                <Navbar.Brand>
+                                    <img src={logo} className="img-responsive" alt="logo" />
+                                </Navbar.Brand>
+                                <Navbar.Toggle />
+                            </Navbar.Header>
+                            <Navbar.Collapse>
+                                <Nav pullRight>
+                                    <NavItem eventKey={1} href="#">
+                                        Home
+                                    </NavItem>
+                                    <NavItem eventKey={2} href="#">
+                                        About
+                                    </NavItem>
+                                    <NavItem eventKey={2} href="#">
+                                        Scedule
+                                    </NavItem>
+                                    <NavItem eventKey={2} href="#">
+                                        Price
+                                    </NavItem>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </Navbar>
                     </div>
 
                     <div className="container">
-                        <div className="row header-body" id="header-body" ref="headerBody">
+                        <div className="row header-body" id="header-body" ref="headerBody" style={
+                            {
+                                paddingTop: this.state.top + 'px',
+                                paddingBotton: this.state.top - this.state.height + 'px',
+                                position: 'relative'
+                            }
+                        }>
 
                             <Countdown date={new Date(1536411600000)} renderer={renderer} />
 
@@ -78,11 +62,13 @@ class HeaderComponent extends React.Component {
                             </div>
 
                             <div className="col-md-offset-1 col-md-5 heading fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
-                                <h1><b>JOIN THE WORLDS <br /> LARGEST COMMUNITY </b><br />MEETUP 2016</h1>
+                                <h1><b>JUNTE-SE AO MAIOR<br /> CENTRO DE EVENTO VIKING DA AMERICA LATINA </b><br />INAUGURAÇÃO 01/01/2019</h1>
                             </div>
 
                             <div className="col-md-5 pera fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorp eu feugiat nulla facilisis atter liberty.</p>
+                                <p>
+                                    Espaço cultural e para eventos que busca trazer uma imersão completa aos visitantes, fornecendo não apenas um visual único composto por estruturas históricas, como também realizando demostrações de combate, artesanato, carpintaria, alimentação, jogos, dentre outras atividades da era viking.
+                                </p>
 
                                 <div className="buy-tricket btn-scroll">
                                     <div className="btn-group">
@@ -99,13 +85,70 @@ class HeaderComponent extends React.Component {
 
     componentDidMount() {
         let height = this.refs.headerBody.offsetHeight;
-        var top = Math.max(window.innerHeight / 2 - height / 2, 0);
+        let top = Math.max(window.innerHeight / 2 - height / 2, 0);
+        let heigthNav = this.refs.headerNavbar.offsetHeight;
+
+        // var top = Math.max($(window).height() / 2 - $("#header-body")[0].offsetHeight / 2, 0);
+        // $("#header-body").css('padding-top', top + "px").css('padding-bottom', (top - $('#header-navbar ').height()) + "px");
+        // $("#header-body").css('position', 'relative');
+        console.log(top);
+        console.log(height);
+        console.log(heigthNav);
+
         this.setState({
-            height: height,
+            height: heigthNav,
             top: top
         });
+
+        $("#mainNavBar").css({ "background-image": "none" });
+        // $(document).on('scroll', function () {
+        //     var scrollPos = $(this).scrollTop();
+
+        //     if (scrollPos > 100) {
+        //         $('.navbar-fixed-top').addClass('navbar-home');
+        //     }
+        //     else {
+        //         $('.navbar-fixed-top').removeClass('navbar-home');
+        //     }
+        // });
+
+        // $("#navbar-cus").click(function () {
+        //     $(this).toggleClass('navbar-colse');
+        // });
+
+        // $('#navbar-cus').click(function () {
+        //     $('#myNavbar .nav').toggleClass('slideInRight slideOutRight');
+        //     $('.navbar-nav').slideToggle('show');
+        // });
+
+        // navbarCus();
+
+        if (matchMedia("(min-width: 768px) and (min-height: 500px)").matches) {
+            $(".header-overlay").css('min-height', window.innerHeight + "px");
+        }
     }
 }
+
+// const navbarCus = () => {
+//     if ($(document).width() <= 768) {
+//         $('.myNavbarUl').removeClass('animated'),
+//             $('#myNavbar').addClass('collapse'),
+//             $('#myNavbar').addClass('navbar-collapse')
+
+//     } else {
+//         $('.myNavbarUl').addClass('animated')
+//     }
+// }
+
+const renderer = ({ days, hours, minutes, seconds, completed }) => {
+    if (completed) {
+        // Render a completed state
+        return <div>DONE</div>
+    } else {
+        // Render a countdown
+        return <CustomCountdownComponent days={days} hours={hours} minutes={minutes} seconds={seconds} />
+    }
+};
 
 const CustomCountdownComponent = ({ days, hours, minutes, seconds, completed }) => {
 

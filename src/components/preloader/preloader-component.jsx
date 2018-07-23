@@ -1,4 +1,5 @@
 import React from "react";
+import $ from "jquery";
 
 class Preloader extends React.Component {
     render() {
@@ -11,6 +12,11 @@ class Preloader extends React.Component {
                 </div>
             </div>
         )
+    }
+
+    componentDidMount() {
+        $(".bubblingG").fadeOut();
+        $(".spinner-wrapper").delay(400).fadeOut("slow");
     }
 }
 
