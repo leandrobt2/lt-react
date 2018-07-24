@@ -2,46 +2,53 @@ import React from "react";
 import logo from '../../assets/image/imageedit_4_5380735982.png';
 import Countdown from 'react-countdown-now';
 import { Navbar, Nav, NavItem, Button } from 'react-bootstrap';
-import $ from 'jquery';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class HeaderComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.handleScroll = this.handleScroll.bind(this);
 
         this.state = {
             height: 0,
             top: 0,
-            heigthNav: 0
+            navbarClass: ['header-navbar', 'navbar-fixed-top']
         };
     }
 
     render() {
+        let anchorLinkStyle = {
+            position: "relative",
+            display: "block",
+            padding: "15px 15px",
+            color: '#9d9d9d'
+        };
         return (
             <header className="header-background header" id="header" data-stellar-background-ratio="0.5">
-                <div className="fix header-overlay overlay-color">
+                <div className="fix header-overlay overlay-color" style={
+                    {
+                        minHeight: matchMedia("(min-width: 768px) and (min-height: 500px)").matches ? window.innerHeight + 'px' : 0 + 'px'
+                    }
+                }>
 
-                    <div className="header-navbar navbar-fixed-top" id="header-navbar" ref="headerNavbar">
+                    <div className={this.state.navbarClass.join(' ')} id="header-navbar" ref="headerNavbar">
                         <Navbar collapseOnSelect inverse id="mainNavBar">
                             <Navbar.Header>
                                 <Navbar.Brand>
-                                    <img src={logo} className="img-responsive" alt="logo" />
+                                    <AnchorLink href='#header'>
+                                        <img src={logo} className="img-responsive" alt="logo" />
+                                    </AnchorLink>
                                 </Navbar.Brand>
                                 <Navbar.Toggle />
                             </Navbar.Header>
                             <Navbar.Collapse>
                                 <Nav pullRight>
-                                    <NavItem eventKey={1} href="#">
-                                        Home
-                                    </NavItem>
-                                    <NavItem eventKey={2} href="#">
-                                        About
-                                    </NavItem>
-                                    <NavItem eventKey={2} href="#">
-                                        Scedule
-                                    </NavItem>
-                                    <NavItem eventKey={2} href="#">
-                                        Price
-                                    </NavItem>
+                                    <div style={{ float: 'left' }}>
+                                        <AnchorLink href='#header' style={anchorLinkStyle}>Home</AnchorLink>
+                                    </div>
+                                    <div style={{ float: 'left' }}>
+                                        <AnchorLink href='#aboutEventComponent' style={anchorLinkStyle}>About</AnchorLink>
+                                    </div>
                                 </Nav>
                             </Navbar.Collapse>
                         </Navbar>
@@ -88,57 +95,34 @@ class HeaderComponent extends React.Component {
         let top = Math.max(window.innerHeight / 2 - height / 2, 0);
         let heigthNav = this.refs.headerNavbar.offsetHeight;
 
-        // var top = Math.max($(window).height() / 2 - $("#header-body")[0].offsetHeight / 2, 0);
-        // $("#header-body").css('padding-top', top + "px").css('padding-bottom', (top - $('#header-navbar ').height()) + "px");
-        // $("#header-body").css('position', 'relative');
-        console.log(top);
-        console.log(height);
-        console.log(heigthNav);
-
         this.setState({
             height: heigthNav,
-            top: top
+            top: top,
+            navbarClass: ['header-navbar', 'navbar-fixed-top']
         });
 
-        $("#mainNavBar").css({ "background-image": "none" });
-        // $(document).on('scroll', function () {
-        //     var scrollPos = $(this).scrollTop();
+        window.addEventListener('scroll', this.handleScroll);
+    }
 
-        //     if (scrollPos > 100) {
-        //         $('.navbar-fixed-top').addClass('navbar-home');
-        //     }
-        //     else {
-        //         $('.navbar-fixed-top').removeClass('navbar-home');
-        //     }
-        // });
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
 
-        // $("#navbar-cus").click(function () {
-        //     $(this).toggleClass('navbar-colse');
-        // });
+    handleScroll() {
+        var scrollPos = document.body.scrollTop;
 
-        // $('#navbar-cus').click(function () {
-        //     $('#myNavbar .nav').toggleClass('slideInRight slideOutRight');
-        //     $('.navbar-nav').slideToggle('show');
-        // });
-
-        // navbarCus();
-
-        if (matchMedia("(min-width: 768px) and (min-height: 500px)").matches) {
-            $(".header-overlay").css('min-height', window.innerHeight + "px");
+        if (scrollPos > 100) {
+            if (this.state.navbarClass.length == 2) {
+                this.setState({ ...this.state, navbarClass: ['header-navbar', 'navbar-fixed-top', 'navbar-home'] });
+            }
+        }
+        else {
+            if (this.state.navbarClass.length == 3) {
+                this.setState({ ...this.state, navbarClass: ['header-navbar', 'navbar-fixed-top'] });
+            }
         }
     }
 }
-
-// const navbarCus = () => {
-//     if ($(document).width() <= 768) {
-//         $('.myNavbarUl').removeClass('animated'),
-//             $('#myNavbar').addClass('collapse'),
-//             $('#myNavbar').addClass('navbar-collapse')
-
-//     } else {
-//         $('.myNavbarUl').addClass('animated')
-//     }
-// }
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {

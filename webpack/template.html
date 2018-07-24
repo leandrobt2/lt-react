@@ -4,6 +4,8 @@
     <title>lt.react</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 </head>
 
 <body>
@@ -11,5 +13,11 @@
 
     </div>
 </body>
+<script>
+    $(document).ready(function () {
+        $("#mainNavBar").css({ "background-image": "none" });
+        new WOW({ mobile: false }).init();
+    });
+</script>
 
 </html>
