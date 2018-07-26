@@ -7,6 +7,7 @@ import AboutEventComponent from './components/about-event/about-event-component'
 import FooterComponent from './components/footer/footer-component';
 import ContactUsComponent from './components/contact-us/contact-us-component';
 import ScheduleComponent from './components/schedule/schedule-component';
+import FaqComponent from './components/faq/faq-component';
 
 class MasterPage extends React.Component {
     render() {
@@ -16,6 +17,7 @@ class MasterPage extends React.Component {
                 <HeaderComponent />
                 <AboutEventComponent />
                 <ScheduleComponent />
+                <FaqComponent />
                 <ContactUsComponent />
                 <FooterComponent />
             </div>

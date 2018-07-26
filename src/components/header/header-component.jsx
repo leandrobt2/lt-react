@@ -47,7 +47,17 @@ class HeaderComponent extends React.Component {
                                         <AnchorLink href='#header' style={anchorLinkStyle}>Home</AnchorLink>
                                     </div>
                                     <div style={{ float: 'left' }}>
-                                        <AnchorLink href='#aboutEventComponent' style={anchorLinkStyle}>About</AnchorLink>
+                                        <AnchorLink href='#aboutEventComponent' style={anchorLinkStyle}>Sobre</AnchorLink>
+                                    </div>
+                                    
+                                    <div style={{ float: 'left' }}>
+                                        <AnchorLink href='#scheduleId' style={anchorLinkStyle}>Agenda</AnchorLink>
+                                    </div>
+                                    <div style={{ float: 'left' }}>
+                                        <AnchorLink href='#faqId' style={anchorLinkStyle}>FAQ</AnchorLink>
+                                    </div>
+                                    <div style={{ float: 'left' }}>
+                                        <AnchorLink href='#contactus' style={anchorLinkStyle}>Contate-nos</AnchorLink>
                                     </div>
                                 </Nav>
                             </Navbar.Collapse>

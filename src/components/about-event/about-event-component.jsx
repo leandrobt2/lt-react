@@ -86,7 +86,7 @@ class AboutEventComponent extends React.Component {
 
                                 {/* <!--  Start: Video Area  --> */}
                                 <div className="video">
-                                    <iframe src="https://player.vimeo.com/video/123084227?" allowFullScreen></iframe>
+                                    <iframe src="https://player.vimeo.com/video/71371201?" allowFullScreen></iframe>
                                     {/* <!--  Video Link Goes Here  --> */}
                                 </div>
                                 {/* <!--  End: Video Area  --> */}

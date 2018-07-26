@@ -1,9 +1,26 @@
 import React from "react";
+import { Nav, NavItem, Button } from 'react-bootstrap';
 
 class ScheduleComponent extends React.Component {
     render() {
         return (
-            <section className="scedule-background scedule" id="section-3">
+            // <div>
+            //     <ul class="nav nav-tabs">
+            //         <li><a href="#a" data-toggle="tab">a</a></li>
+            //         <li><a href="#b" data-toggle="tab">b</a></li>
+            //         <li><a href="#c" data-toggle="tab">c</a></li>
+            //         <li><a href="#d" data-toggle="tab">d</a></li>
+            //     </ul>
+
+            //     <div class="tab-content">
+            //         <div class="tab-pane active" id="a">AAA</div>
+            //         <div class="tab-pane" id="b">BBB</div>
+            //         <div class="tab-pane" id="c">CCC</div>
+            //         <div class="tab-pane" id="d">DDD</div>
+            //     </div>
+            // </div>
+            
+            <section className="scedule-background scedule" id="scheduleId">
                 <div className="fix overlay-color">
 
                     <div className="container">
@@ -11,15 +28,9 @@ class ScheduleComponent extends React.Component {
 
                             <div role="tabpanel">
 
-                                <ul className="scedule-main col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 nav wow fadeInDown animated" data-wow-offset="10" data-wow-duration="1.5s" role="tablist">
-                                    <li role="presentation" className="btn-group col-xs-12 col-sm-12 col-md-4 active">
+                                <ul className="scedule-main col-8 nav wow fadeInDown animated" data-wow-offset="10" data-wow-duration="1.5s" role="tablist">
+                                    <li role="presentation" className="btn-group col-xs-12 col-sm-12 col-md-12 active">
                                         <a className="btn-border btn-standard btn btn-cus" href="#scedule-1" aria-controls="scedule-1" role="tab" data-toggle="tab">First Day</a>
-                                    </li>
-                                    <li role="presentation" className="btn-group col-xs-12 col-sm-12 col-md-4">
-                                        <a className="btn-border btn-standard btn btn-cus" href="#scedule-2" aria-controls="scedule-2" role="tab" data-toggle="tab">Second Day</a>
-                                    </li>
-                                    <li role="presentation" className="btn-group col-xs-12 col-sm-12 col-md-4">
-                                        <a className="btn-border btn-standard btn btn-cus" href="#scedule-3" aria-controls="scedule-3" role="tab" data-toggle="tab">Third Day</a>
                                     </li>
                                 </ul>
 
@@ -82,140 +93,6 @@ class ScheduleComponent extends React.Component {
 
                                             </div>
                                             <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-4">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div role="tabpanel" className="tab-pane wow fadeInUp animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-2">
-
-                                        <div className="dropdown">
-                                            <span id="btn-scedule-2" data-id="#nav-ul-scedule-2" className="btn-scedule-css hidden-md label hidden-lg"></span>
-
-                                            <ul className="nav nav-cus col-md-4" role="tablist" id="nav-ul-scedule-2">
-                                                <li role="presentation" className="active">
-                                                    <a href="#scedule-sub-5" aria-controls="scedule-sub-1" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Welcome &amp; Registration</span>
-                                                        <span className="nav-time">09:30am - 11:30am</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" className="">
-                                                    <a href="#scedule-sub-6" aria-controls="scedule-sub-2" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Improving Wordpress</span>
-                                                        <span className="nav-time">11:30am - 1pm</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" className="">
-                                                    <a href="#scedule-sub-7" aria-controls="scedule-sub-3" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Dance With Code</span>
-                                                        <span className="nav-time">09:30am - 11:30am</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" className="">
-                                                    <a href="#scedule-sub-8" aria-controls="scedule-sub-4" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Less Motivation</span>
-                                                        <span className="nav-time">09:30am - 11:30am</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-
-                                        <div className="tab-content col-md-8">
-                                            <div role="tabpanel" className="tab-pane active wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-5">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-6">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-7">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting..</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-8">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div role="tabpanel" className="tab-pane wow fadeInUp animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-3">
-
-                                        <div className="dropdown">
-                                            <span id="btn-scedule-3" data-id="#nav-ul-scedule-3" className="btn-scedule-css hidden-md hidden-lg label"></span>
-
-
-
-                                            <ul className="nav nav-cus col-md-4" role="tablist" id="nav-ul-scedule-3">
-                                                <li role="presentation" className="active">
-                                                    <a href="#scedule-sub-9" aria-controls="scedule-sub-1" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Welcome &amp; Registration</span>
-                                                        <span className="nav-time">09:30am - 11:30am</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" className="">
-                                                    <a href="#scedule-sub-10" aria-controls="scedule-sub-2" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Improving Wordpress</span>
-                                                        <span className="nav-time">11:30am - 1pm</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" className="">
-                                                    <a href="#scedule-sub-11" aria-controls="scedule-sub-3" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Dance With Code</span>
-                                                        <span className="nav-time">09:30am - 11:30am</span>
-                                                    </a>
-                                                </li>
-                                                <li role="presentation" className="">
-                                                    <a href="#scedule-sub-12" aria-controls="scedule-sub-4" role="tab" data-toggle="tab">
-                                                        <span className="nav-header">Less Motivation</span>
-                                                        <span className="nav-time">09:30am - 11:30am</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-
-
-                                        <div className="tab-content col-md-8">
-                                            <div role="tabpanel" className="tab-pane active wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-9">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-10">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-11">
-
-                                                <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
-                                                <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>
-                                                <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut  aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor inpi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lect</p>
-
-                                            </div>
-                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-12">
 
                                                 <h3>It is a long established fact that a reader will be distracted by the readable contents on the webpages.</h3>
                                                 <p>Lorem ipsum event dolor sit amet, landing page consectetuer seminar elit, sed event nonummy nibh euismod community ut laoreet dolore magna convention erat volutpat. Conference wisi enim ad minim webinar, quis nostrud meetup tation ullamcorp eu feugiat nulla exhibition vero eros et landing page et iusto odior expo cum summit eleifend event congue nihil imperdiet meeting.</p>

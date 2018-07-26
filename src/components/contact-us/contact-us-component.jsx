@@ -1,12 +1,18 @@
 import React from 'react';
 import $ from 'jquery';
+//import GoogleMapsLoader from "google-maps";
 
 class ContactUsComponent extends React.Component {
+
+    // componentWillMount() {
+    //     GoogleMapsLoader.LANGUAGE = 'pt';
+    //     GoogleMapsLoader.REGION = 'BR';
+    // };
 
     render() {
         return (
             // <!-- Start: Contact Us Area, "#SECTION-11" -->
-            <section className="contact-us" id="section-11">
+            <section className="contact-us" id="contactus">
                 <div className="container">
                     <div className="row contact-us-body">
 
@@ -51,9 +57,46 @@ class ContactUsComponent extends React.Component {
         )
     }
 
-    componentDidMount(){
+    componentDidMount() {
         var mapHeight = $('.contact-us-body').height();
         $(".map").css('min-height', mapHeight);
+
+        var myLocation = new google.maps.LatLng(24.892467, 91.87048);
+
+        var draggableValue;
+        if (window.innerWidth <= 768) {
+            draggableValue = false;   /*This option is used for disabling drag.*/
+        }
+        else {
+            draggableValue = true;   /*This option is used for disabling drag.*/
+        }
+
+
+        var mapOptions = {
+            center: myLocation,
+            zoom: 16,
+            mapTypeControl: true,  /*This option will hide map type.*/
+            draggable: draggableValue,
+            scaleControl: false,   /*This option is used for disable zoom by scale.*/
+            scrollwheel: false,   /*This option is used for disable zoom on mouse.*/
+            navigationControl: true,   /**/
+
+            // How you would like to style the map. 
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [{ "stylers": [{ "saturation": -100 }] }],
+
+            streetViewControl: true   /**/
+        };
+
+        var marker = new google.maps.Marker({
+            position: myLocation,
+            title: "Peggy Guggenheim Collection"
+        });
+
+        var map = new google.maps.Map(document.getElementById("map"),
+            mapOptions);
+
+        marker.setMap(map);
     }
 }
 
