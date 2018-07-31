@@ -8,6 +8,9 @@ import FooterComponent from './components/footer/footer-component';
 import ContactUsComponent from './components/contact-us/contact-us-component';
 import ScheduleComponent from './components/schedule/schedule-component';
 import FaqComponent from './components/faq/faq-component';
+import CoFounderComponent from './components/cofounder/co-founder';
+import PartnerComponent from './components/partner/partner-component';
+import PriceComponent from './components/price/price-component';
 
 class MasterPage extends React.Component {
     render() {
@@ -16,7 +19,10 @@ class MasterPage extends React.Component {
                 <Preloader />
                 <HeaderComponent />
                 <AboutEventComponent />
+                {/* <CoFounderComponent /> */}
                 <ScheduleComponent />
+                <PriceComponent />
+                <PartnerComponent />
                 <FaqComponent />
                 <ContactUsComponent />
                 <FooterComponent />
