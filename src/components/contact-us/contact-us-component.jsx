@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+import $ from "jquery";
 //import GoogleMapsLoader from "google-maps";
 
 class ContactUsComponent extends React.Component {
@@ -98,6 +98,13 @@ class ContactUsComponent extends React.Component {
 
         marker.setMap(map);
     }
+
+    componentDidCatch(error, info) {
+        // Display fallback UI
+        this.setState({ hasError: true });
+        // You can also log the error to an error reporting service
+        console.log(error, info);
+      }
 }
 
 export default ContactUsComponent;

@@ -1276,3 +1276,30 @@ a.prev:hover {
   -webkit-transition: all 0.8s;
   -o-transition: all 0.8s;
 }
+
+.item-slider {
+    background: none !important;
+    padding: 0px 0px;
+    margin: 10px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.item-slider p {
+  color: #60626d;
+}
+
+.item-slider h3 {
+  color: #ff3030;
+}
+
+.item-slider-img {
+  max-width: 216px;
+}
+
+.slick-slide{
+  height: 440px;
+}

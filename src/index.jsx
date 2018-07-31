@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import 'animate.css/animate.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'font-awesome/fonts/fontawesome-webfont.woff2';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import './assets/style/hover-effect-animate.css';
 import './assets/style/hover-effect.css';
@@ -15,6 +17,7 @@ import './assets/style/style.css';
 import './assets/style/responsive.css';
 import './assets/style/red.css';
 import './assets/style/preloader.css';
+
 
 const render = () => {
   ReactDOM.render(<MasterPage />, document.getElementById("app"));
