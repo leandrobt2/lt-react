@@ -73,7 +73,7 @@ class HeaderComponent extends React.Component {
                             }
                         }>
 
-                            <Countdown date={new Date(1536411600000)} renderer={renderer} />
+                            <Countdown date={new Date(1536911600000)} renderer={renderer} />
 
                             <div className="clearfix">
                             </div>

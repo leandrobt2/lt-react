@@ -1,14 +1,7 @@
 import React from 'react';
 import $ from "jquery";
-//import GoogleMapsLoader from "google-maps";
 
 class ContactUsComponent extends React.Component {
-
-    // componentWillMount() {
-    //     GoogleMapsLoader.LANGUAGE = 'pt';
-    //     GoogleMapsLoader.REGION = 'BR';
-    // };
-
     render() {
         return (
             // <!-- Start: Contact Us Area, "#SECTION-11" -->
@@ -61,7 +54,7 @@ class ContactUsComponent extends React.Component {
         var mapHeight = $('.contact-us-body').height();
         $(".map").css('min-height', mapHeight);
 
-        var myLocation = new google.maps.LatLng(24.892467, 91.87048);
+        var myLocation = new google.maps.LatLng(-23.9497549, -47.0776593);
 
         var draggableValue;
         if (window.innerWidth <= 768) {
