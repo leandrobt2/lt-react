@@ -49,29 +49,29 @@ class PeopleComponent extends React.Component {
         ]
     }
 
-    renderSlide(slider) {
-        return (
-            <div>
-                <div className="item" key={slider.key}>
-                    <div className="view view-first">
-                        <img src={slider.image} alt="" />
-                        <div className="mask">
-                            <ul className="nav">
-                                <li><a href="#"> <i className="fa facebook fa-facebook"></i> </a></li>
-                                <li><a href="#"> <i className="fa twitter fa-twitter"></i> </a></li>
-                                <li><a href="#"> <i className="fa skype fa-skype"></i> </a></li>
-                                <li><a href="#"> <i className="fa rss fa-rss "></i> </a></li>
-                            </ul>
+    // renderSlide(slider) {
+    //     return (
+    //         <div>
+    //             <div className="item" key={slider.key}>
+    //                 <div className="view view-first">
+    //                     <img src={slider.image} alt="" />
+    //                     <div className="mask">
+    //                         <ul className="nav">
+    //                             <li><a href="#"> <i className="fa facebook fa-facebook"></i> </a></li>
+    //                             <li><a href="#"> <i className="fa twitter fa-twitter"></i> </a></li>
+    //                             <li><a href="#"> <i className="fa skype fa-skype"></i> </a></li>
+    //                             <li><a href="#"> <i className="fa rss fa-rss "></i> </a></li>
+    //                         </ul>
 
-                        </div>
-                    </div>
-                    <div className="clearfix"></div>
+    //                     </div>
+    //                 </div>
+    //                 <div className="clearfix"></div>
 
-                    <h3>{slider.name}</h3>
-                    <p>{slider.desc}</p>
+    //                 <h3>{slider.name}</h3>
+    //                 <p>{slider.desc}</p>
 
-                </div></div>);
-    }
+    //             </div></div>);
+    // }
 
     render() {
         var settings = {

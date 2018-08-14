@@ -7,7 +7,7 @@ class PriceComponent extends React.Component {
     render() {
         return (
 
-            <section className="pricing-tables" id="section-5">
+            <section className="pricing-tables" id="priceId">
                 <div className="container">
                     <div className="row pricing-tables-body">
 
@@ -72,7 +72,7 @@ class PriceComponent extends React.Component {
 
                             <div className="tab-pane" id="pricing-table-2">
 
-                                <div className="wow fadeInDown animated" data-wow-delay="0.5s">
+                                <div>
                                     <div className="table-single">
 
                                         <p>
@@ -101,7 +101,7 @@ class PriceComponent extends React.Component {
 
                             <div className="tab-pane" id="pricing-table-3">
 
-                                <div className="wow fadeInDown animated" data-wow-delay="0.5s">
+                                <div>
                                     <div className="table-single">
                                         <p>
                                             <span className="currency">$</span>

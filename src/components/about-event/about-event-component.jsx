@@ -5,7 +5,7 @@ class AboutEventComponent extends React.Component {
     render() {
         return (
             <div>
-                <section className=" about-our-event" id="aboutEventComponent">
+                <section className="about-our-event" id="aboutEventComponent">
                     {/* <!-- Start: about-our-event, "SECTION-1" --> */}
                     <div className="container">
 
