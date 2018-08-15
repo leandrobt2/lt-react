@@ -75,11 +75,11 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '/template.html')
-        })
-        // new CopyWebpackPlugin([
-        //     //{ from: 'src/assets/image', to: outputAssetImgPath }
-        //     //{ from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: outputAssetCssPath }
-        // ]),
+        }),
+        new CopyWebpackPlugin([
+            { from: 'src/assets/image/fav128.ico', to: outputAssetImgPath }
+            //{ from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: outputAssetCssPath }
+        ]),
         // new HtmlWebpackIncludeAssetsPlugin({
         //     assets: ['assets/js/bootstrap.min.js', 'assets/css/bootstrap.min.css'],
         //     append: false

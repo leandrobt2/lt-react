@@ -1,4 +1,5 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class AboutEventComponent extends React.Component {
 
@@ -15,8 +16,8 @@ class AboutEventComponent extends React.Component {
                             {/* <!-- Start: About-Our-Event Left Area  --> */}
                             <div className="about-our-event-left col-md-5 wow fadeInLeft animated" data-wow-offset="120" data-wow-duration="1.5s">
                                 <div className="about-our-event-left-body">
-                                    <h2>ABOUT OUR EVENT</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorp eu feugiat nulla facilisis atter liberty.</p>
+                                    <h2>SOBRE OS EVENTOS</h2>
+                                    <p>A realização de eventos tem como objetivo proporcionar para o público a experiência de como seria a vida dentro de uma vila da era viking, onde os visitantes farão parte do povo que lá reside, executando tarefas conforme aptidão de cada um, marcando presença como comerciantes, guerreiros em busca de fama, ou simplesmente aliados que estão de passagem em busca de abrigo e boa comida. </p>
                                 </div>
                             </div>
                             {/* <!-- End: About-Our-Event Left Area  --> */}
@@ -26,28 +27,28 @@ class AboutEventComponent extends React.Component {
                                 <div className="container-fluid">
                                     <div className="row about-our-event-right-body">
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">15</span>
-                                            <span className="title">Speakers</span>
+                                            <span className="counter style-all">2000</span>
+                                            <span className="title">m²</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">35</span>
-                                            <span className="title">Awards</span>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">10</span>
-                                            <span className="title">Workshops</span>
-                                        </div>
-                                        <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">1200</span>
-                                            <span className="title">Seats</span>
+                                            <span className="counter style-all">1º</span>
+                                            <span className="title">Vila Viking do BR</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
                                             <span className="counter style-all">100</span>
-                                            <span className="title">Podcasts</span>
+                                            <span className="title">Pessoas</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">96</span>
-                                            <span className="title">Offices</span>
+                                            <span className="counter style-all">1</span>
+                                            <span className="title">Ferreiro</span>
+                                        </div>
+                                        <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
+                                            <span className="counter style-all">1</span>
+                                            <span className="title">Campo de Batalha</span>
+                                        </div>
+                                        <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
+                                            <span className="counter style-all">30</span>
+                                            <span className="title">Vagas Estacionamento</span>
                                         </div>
                                     </div>
                                 </div>
@@ -97,14 +98,17 @@ class AboutEventComponent extends React.Component {
 
                             {/* <!-- Start: Our Featured Speaker Right --> */}
                             <div className="our-featured-speaker-right col-md-6 wow fadeInLeft animated" data-wow-offset="120" data-wow-duration="1.5s">
-                                <h2>ENVATO BANGLADESH MEETUP</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorp eu feugiat nulla facilisis at vero eros et accumsan et iusto odior tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quohab por cum soluta nobis eleif reen d option congue nihil doming</p>
+                                <h2>SOBRE O ESPAÇO</h2>
+                                <p>
+                                    A Vila Viking tem sido construída com o máximo de cuidados e embasamento histórico, informações estas agregadas através de estudos e contatos com camaradas recriacionistas.
+                                    A Vila estará em constante crescimento, a cada encontro teremos mais estruturas, itens para decoração e ferramentas para uso por parte dos visitantes.
+                                </p>
 
                                 {/* <!-- Start: Button area --> */}
                                 <div className="buy-tricket">
                                     <div className="btn-group btn-scroll">
                                         <a href="#section-4" className="btn-fill btn-standard btn btn-cus">Our Speakers</a>
-                                        <a href="#section-5" className="btn-border btn-standard btn btn-cus">Price</a>
+                                        <a href="#priceId" className="btn-border btn-standard btn btn-cus">Price</a>
                                     </div>
                                 </div>
                                 {/* <!-- End: Button area" --> */}

@@ -236,7 +236,7 @@ h3 {
   padding-top: 14px !important;
 }
 .navbar-fixed-top.navbar-home .navbar-header .navbar-brand img {
-  height: 23px !important;
+  height: 35px !important;
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;
@@ -268,7 +268,7 @@ h3 {
   padding-top: 9px;
 }
 .header-navbar .navbar-inverse .navbar-header .navbar-brand img {
-  height: 30px;
+  height: 150px;
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;

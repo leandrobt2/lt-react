@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/image/imageedit_4_5380735982.png';
+import logo from '../../assets/image/logo.png';
 import Countdown from 'react-countdown-now';
 import { Navbar, Nav, NavItem, Button } from 'react-bootstrap';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -82,17 +82,26 @@ class HeaderComponent extends React.Component {
                             </div>
 
                             <div className="col-md-offset-1 col-md-5 heading fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
-                                <h1><b>JUNTE-SE AO MAIOR<br /> CENTRO DE EVENTO VIKING DA AMERICA LATINA </b><br />INAUGURAÇÃO 01/01/2019</h1>
+                                <h1>
+                                    <b>CONHEÇA A PRIMEIRA<br />VILA VIKING DO BRASIL</b>
+                                    <br />
+                                    <div>
+                                        INAUGURAÇÃO (Em breve)
+                                    </div>
+                                </h1>
                             </div>
 
-                            <div className="col-md-5 pera fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
+                            <div className="col-md-5 heading pera fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s">
+                                <h2>
+                                    VENHA APRENDER COMO SERIA A VIDA NESSE PERÍODO.
+                                </h2>
                                 <p>
-                                    Espaço cultural e para eventos que busca trazer uma imersão completa aos visitantes, fornecendo não apenas um visual único composto por estruturas históricas, como também realizando demostrações de combate, artesanato, carpintaria, alimentação, jogos, dentre outras atividades da era viking.
+                                    Espaço cultural e para eventos que busca trazer uma imersão completa aos visitantes, fornecendo não apenas um visual composto por estruturas históricas, como também realizando demonstrações de combate, artesanato, carpintaria, alimentação, jogos, dentre outras atividades da era viking.
                                 </p>
 
                                 <div className="buy-tricket btn-scroll">
                                     <div className="btn-group">
-                                        <a href="#section-6" className="btn-fill btn-standard btn btn-cus">Buy Tricket</a>
+                                        <AnchorLink href='#priceId' className="btn-fill btn-standard btn btn-cus" style={anchorLinkStyle}>Garanta seu ingresso aqui</AnchorLink>
                                     </div>
                                 </div>
                             </div>
@@ -139,20 +148,30 @@ class HeaderComponent extends React.Component {
 
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
-        // Render a completed state
-        return <div>DONE</div>
-    } else {
-        // Render a countdown
-        return <CustomCountdownComponent days={days} hours={hours} minutes={minutes} seconds={seconds} />
+        return (
+            <div className="count_down fadeInDown animated" data-wow-offset="120" data-wow-duration="1.5s">
+                <div className="days_wrapper col-sm-12 col-xs-12 col-md-12">
+                    <div className="background time">
+                        <span className="counter style_all">Vila Viking Brasil</span>
+                        <span className="title">Em Breve</span>
+                    </div>
+                </div>
+            </div>)
     }
+    else
+        return <CustomCountdownComponent days={days} hours={hours} minutes={minutes} seconds={seconds} />
 };
 
 const CustomCountdownComponent = ({ days, hours, minutes, seconds, completed }) => {
 
     return (
-        <div className="count_down fadeInDown animated"
-            data-wow-offset="120"
-            data-wow-duration="1.5s">
+        <div className="count_down fadeInDown animated" data-wow-offset="120" data-wow-duration="1.5s">
+            <div className="days_wrapper col-sm-12 col-xs-12 col-md-12">
+                <div className="background time">
+                    <span className="counter style_all">Próximo encontro em:</span>
+                </div>
+            </div>
+            <div style={{ height: "140px" }}></div>
             <div className="days_wrapper col-sm-3 col-xs-3 col-md-3 custom">
                 <div className="background time">
                     <span className="counter style_all">{days}</span>

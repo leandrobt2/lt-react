@@ -4,27 +4,26 @@ import $ from "jquery";
 class ContactUsComponent extends React.Component {
     render() {
         return (
-            // <!-- Start: Contact Us Area, "#SECTION-11" -->
             <section className="contact-us" id="contactus">
                 <div className="container">
                     <div className="row contact-us-body">
 
                         <div className="contact-us-left col-md-4 wow fadeInRight animated" data-wow-offset="120" data-wow-duration="1.5s">
 
-                            <h2>Venue info</h2>
-                            <p><span className="bold">Address:</span> Eventer, one caspian point, pierhead street cardiff waterside, cf10 4dq</p>
-                            <p><span className="bold">Contact: </span><a href="callto:+8801777272322">+880 177 727 2322</a></p>
-                            <p><span className="bold">Mail: </span><a href="mailto:as@deviserweb.com">as@deviserweb.com</a></p>
+                            <h2>Vila Viking Brasil</h2>
+                            <p><span className="bold">Endereço:</span> Eventer, one caspian point, pierhead street cardiff waterside, cf10 4dq</p>
+                            <p><span className="bold">Telefone: </span><a href="callto:+8801777272322">+880 177 727 2322</a></p>
+                            <p><span className="bold">Email: </span><a href="mailto:as@deviserweb.com">as@deviserweb.com</a></p>
 
                             {/* <!-- Social Icon Goes Here  --> */}
                             <div className="social-icon">
                                 <p><span className="bold">Find Us On</span></p>
                                 <ul className="nav navbar-left">
-                                    <li><a href="#"> <i className="fa facebook fa-facebook"></i> </a></li>
+                                    <li><a href="https://www.facebook.com/VilaVikingBrasil" target="_blank"> <i className="fa facebook fa-facebook"></i> </a></li>
                                     <li><a href="#"> <i className="fa twitter fa-twitter"></i> </a></li>
                                     <li><a href="#"> <i className="fa youtube fa-youtube"></i> </a></li>
-                                    <li><a href="#"> <i className="fa skype fa-skype"></i> </a></li>
-                                    <li><a href="#"> <i className="fa rss fa-rss "></i> </a></li>
+                                    {/* <li><a href="#"> <i className="fa skype fa-skype"></i> </a></li>
+                                    <li><a href="#"> <i className="fa rss fa-rss "></i> </a></li> */}
                                 </ul>
                             </div>
 
@@ -83,7 +82,7 @@ class ContactUsComponent extends React.Component {
 
         var marker = new google.maps.Marker({
             position: myLocation,
-            title: "Peggy Guggenheim Collection"
+            title: "Vila Viking Brasil"
         });
 
         var map = new google.maps.Map(document.getElementById("map"),
@@ -97,7 +96,7 @@ class ContactUsComponent extends React.Component {
         this.setState({ hasError: true });
         // You can also log the error to an error reporting service
         console.log(error, info);
-      }
+    }
 }
 
 export default ContactUsComponent;
