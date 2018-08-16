@@ -12,8 +12,8 @@ class ContactUsComponent extends React.Component {
 
                             <h2>Vila Viking Brasil</h2>
                             <p><span className="bold">Endereço:</span> Eventer, one caspian point, pierhead street cardiff waterside, cf10 4dq</p>
-                            <p><span className="bold">Telefone: </span><a href="callto:+8801777272322">+880 177 727 2322</a></p>
-                            <p><span className="bold">Email: </span><a href="mailto:as@deviserweb.com">as@deviserweb.com</a></p>
+                            <p><span className="bold">Telefone: </span><a>+55 (11)9123456789</a></p>
+                            <p><span className="bold">Email: </span><a href="mailto:vilaviking@vilaviking.com.br">vilaviking@vilaviking.com.br</a></p>
 
                             {/* <!-- Social Icon Goes Here  --> */}
                             <div className="social-icon">

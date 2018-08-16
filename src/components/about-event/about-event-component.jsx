@@ -4,6 +4,13 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 class AboutEventComponent extends React.Component {
 
     render() {
+        let anchorLinkStyle = {
+            position: "relative",
+            display: "block",
+            padding: "15px 15px",
+            color: '#9d9d9d'
+        };
+        
         return (
             <div>
                 <section className="about-our-event" id="aboutEventComponent">
@@ -107,8 +114,8 @@ class AboutEventComponent extends React.Component {
                                 {/* <!-- Start: Button area --> */}
                                 <div className="buy-tricket">
                                     <div className="btn-group btn-scroll">
-                                        <a href="#section-4" className="btn-fill btn-standard btn btn-cus">Our Speakers</a>
-                                        <a href="#priceId" className="btn-border btn-standard btn btn-cus">Price</a>
+                                        <AnchorLink href='#cofounderId' className="btn-fill btn-standard btn btn-cus" style={anchorLinkStyle}>Conheça os fundadores</AnchorLink>
+                                        <AnchorLink href='#priceId' className="btn-border btn-standard btn btn-cus" style={anchorLinkStyle}>Preços</AnchorLink>
                                     </div>
                                 </div>
                                 {/* <!-- End: Button area" --> */}

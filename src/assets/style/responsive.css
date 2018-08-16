@@ -2,6 +2,14 @@
 /* VARIABLES */
 /***************************************************************************/
 @media (max-width: 767px) {
+  .about-background-image .background-right {
+    background-image: url('../image/5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   body {
     font-size: 14px;
     text-align: center;

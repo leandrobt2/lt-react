@@ -2,6 +2,15 @@ import React from "react";
 import { Nav, NavItem, Button } from 'react-bootstrap';
 
 class ScheduleComponent extends React.Component {
+    state = {
+        display: ""
+    }
+
+    constructor(){
+        super();
+        this.dropDownClick = this.dropDownClick.bind(this);
+    }
+
     render() {
         return (
 
@@ -25,9 +34,9 @@ class ScheduleComponent extends React.Component {
                                     <div role="tabpanel" className="tab-pane active wow fadeInUp animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-1">
 
                                         <div className="dropdown">
-                                            <span id="btn-scedule-1" data-id="#nav-ul-scedule-1" className="btn-scedule-css hidden-md hidden-lg label"></span>
+                                            <span id="btn-scedule-1" data-id="#nav-ul-scedule-1" className="btn-scedule-css hidden-md hidden-lg label" onClick={this.dropDownClick}></span>
 
-                                            <ul className="nav nav-cus col-md-4" role="tablist" id="nav-ul-scedule-1">
+                                            <ul className="nav nav-cus col-md-4" role="tablist" id="nav-ul-scedule-1" style={{ display: this.state.display }}>
                                                 <li role="presentation" className="active">
                                                     <a href="#scedule-sub-1" aria-controls="scedule-sub-1" role="tab" data-toggle="tab">
                                                         <span className="nav-header">Inauguração</span>
@@ -94,6 +103,18 @@ class ScheduleComponent extends React.Component {
                 </div>
             </section>
         )
+    }
+
+    dropDownClick() {
+        if (this.state.display == 'none')
+            this.setState({ display: 'block' });
+        else
+            this.setState({ display: 'none' });
+    }
+
+    componentDidMount() {
+        if (window.innerWidth < 970)
+            this.setState({ display: 'none' });
     }
 }
 
