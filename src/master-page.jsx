@@ -12,6 +12,7 @@ import PeopleComponent from './components/people/people-component';
 import PartnerComponent from './components/partner/partner-component';
 import PriceComponent from './components/price/price-component';
 import MessageComponent from './components/message/message-component';
+import GridImageComponent from './components/grid-image/grid-image-component';
 
 class MasterPage extends React.Component {
     render() {
@@ -20,12 +21,16 @@ class MasterPage extends React.Component {
                 <Preloader />
                 <HeaderComponent />
                 <AboutEventComponent />
+                
+                <GridImageComponent />
                 <MessageComponent />
                 <PeopleComponent />
                 <ScheduleComponent />
                 <PriceComponent />
+                
                 <PartnerComponent />
                 <FaqComponent />
+                
                 <ContactUsComponent />
                 <FooterComponent />
             </div>

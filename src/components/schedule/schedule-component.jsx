@@ -6,9 +6,10 @@ class ScheduleComponent extends React.Component {
         display: ""
     }
 
-    constructor(){
+    constructor() {
         super();
         this.dropDownClick = this.dropDownClick.bind(this);
+        this.teste = this.teste.bind(this);
     }
 
     render() {
@@ -34,29 +35,33 @@ class ScheduleComponent extends React.Component {
                                     <div role="tabpanel" className="tab-pane active wow fadeInUp animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-1">
 
                                         <div className="dropdown">
-                                            <span id="btn-scedule-1" data-id="#nav-ul-scedule-1" className="btn-scedule-css hidden-md hidden-lg label" onClick={this.dropDownClick}></span>
+                                            <span id="btn-scedule-1" data-id="#nav-ul-scedule-1" className="btn-scedule-css hidden-md hidden-lg label" onClick={this.dropDownClick}>
+                                                <div style={{ textAlign: 'right' }}>
+                                                    <i className="fa fa-arrow-down"></i>
+                                                </div>
+                                            </span>
 
                                             <ul className="nav nav-cus col-md-4" role="tablist" id="nav-ul-scedule-1" style={{ display: this.state.display }}>
                                                 <li role="presentation" className="active">
-                                                    <a href="#scedule-sub-1" aria-controls="scedule-sub-1" role="tab" data-toggle="tab">
+                                                    <a href="#scedule-sub-1" aria-controls="scedule-sub-1" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Inauguração</span>
                                                         <span className="nav-time">01/01/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                                 <li role="presentation" className="">
-                                                    <a href="#scedule-sub-2" aria-controls="scedule-sub-2" role="tab" data-toggle="tab">
+                                                    <a href="#scedule-sub-2" aria-controls="scedule-sub-2" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Renactment VIII</span>
                                                         <span className="nav-time">15/02/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                                 <li role="presentation" className="">
-                                                    <a href="#scedule-sub-3" aria-controls="scedule-sub-3" role="tab" data-toggle="tab">
+                                                    <a href="#scedule-sub-3" aria-controls="scedule-sub-3" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">A Era Vikings (793–1066 AD)</span>
                                                         <span className="nav-time">30/03/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                                 <li role="presentation" className="">
-                                                    <a href="#scedule-sub-4" aria-controls="scedule-sub-4" role="tab" data-toggle="tab">
+                                                    <a href="#scedule-sub-4" aria-controls="scedule-sub-4" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Renactment VIX</span>
                                                         <span className="nav-time">15/05/2019 11:00am - 18:00pm</span>
                                                     </a>
@@ -115,6 +120,11 @@ class ScheduleComponent extends React.Component {
     componentDidMount() {
         if (window.innerWidth < 970)
             this.setState({ display: 'none' });
+    }
+
+    teste() {
+        window.scrollTo(0, window.scrollY - 1);
+        window.scrollTo(0, window.scrollY + 1);
     }
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from "jquery";
-
+//import mapLocation from './../../assets/image/map-location.jpg';
 class ContactUsComponent extends React.Component {
     render() {
         return (
@@ -17,78 +17,38 @@ class ContactUsComponent extends React.Component {
 
                             {/* <!-- Social Icon Goes Here  --> */}
                             <div className="social-icon">
-                                <p><span className="bold">Find Us On</span></p>
+                                <p><span className="bold">Encontre-nos:</span></p>
                                 <ul className="nav navbar-left">
                                     <li><a href="https://www.facebook.com/VilaVikingBrasil" target="_blank"> <i className="fa facebook fa-facebook"></i> </a></li>
                                     <li><a href="#"> <i className="fa twitter fa-twitter"></i> </a></li>
                                     <li><a href="#"> <i className="fa youtube fa-youtube"></i> </a></li>
+                                    <li><a href="https://www.instagram.com/vilavikingbrasil/" target="_blank"> <i className="fa instagram fa-instagram"></i> </a></li>
                                     {/* <li><a href="#"> <i className="fa skype fa-skype"></i> </a></li>
                                     <li><a href="#"> <i className="fa rss fa-rss "></i> </a></li> */}
                                 </ul>
                             </div>
 
                         </div>
-                        {/* <!-- End: .contact-us-left .col-md-4  --> */}
-
-                        {/* <!-- Start: Google Map Area, "Part-1-Up" "map" --> */}
                         <div className="contact-us-right col-md-offset-1 col-md-7 wow fadeInLeft animated" data-wow-offset="120" data-wow-duration="1.5s">
                             <div className="row">
-                                <div className="map" id="map">
-
+                                <div className="map" id="map" minheigth={$('.contact-us-body').height()}>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.04863449634!2d-46.87548143121467!3d-23.681531514580286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1542657393435"
+                                        width="600"
+                                        height="450"
+                                        frameBorder="0"
+                                        style={{ border: 0 }}
+                                        allowFullScreen>
+                                    </iframe>
+                                    {/* <a href="" target="_blank">
+                                        <img src={mapLocation} alt="google-map-img" />
+                                    </a> */}
                                 </div>
                             </div>
                         </div>
-                        {/* <!-- End: Google Map Area, "map" --> */}
-
                     </div>
-                    {/* <!-- End: .row .contact-us-body  --> */}
                 </div>
-                {/* <!--  End: .container  --> */}
             </section>
-            //  <!-- End: Contact Us Area, "#SECTION-11" -->
         )
-    }
-
-    componentDidMount() {
-        var mapHeight = $('.contact-us-body').height();
-        $(".map").css('min-height', mapHeight);
-
-        var myLocation = new google.maps.LatLng(-23.9497549, -47.0776593);
-
-        var draggableValue;
-        if (window.innerWidth <= 768) {
-            draggableValue = false;   /*This option is used for disabling drag.*/
-        }
-        else {
-            draggableValue = true;   /*This option is used for disabling drag.*/
-        }
-
-
-        var mapOptions = {
-            center: myLocation,
-            zoom: 16,
-            mapTypeControl: true,  /*This option will hide map type.*/
-            draggable: draggableValue,
-            scaleControl: false,   /*This option is used for disable zoom by scale.*/
-            scrollwheel: false,   /*This option is used for disable zoom on mouse.*/
-            navigationControl: true,   /**/
-
-            // How you would like to style the map. 
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{ "stylers": [{ "saturation": -100 }] }],
-
-            streetViewControl: true   /**/
-        };
-
-        var marker = new google.maps.Marker({
-            position: myLocation,
-            title: "Vila Viking Brasil"
-        });
-
-        var map = new google.maps.Map(document.getElementById("map"),
-            mapOptions);
-
-        marker.setMap(map);
     }
 
     componentDidCatch(error, info) {

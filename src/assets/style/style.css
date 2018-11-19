@@ -269,7 +269,7 @@ h3 {
 }
 .header-navbar .navbar-inverse .navbar-header .navbar-brand img {
   height: 150px;
-  transition: all 0.4s;
+  transition: all 2.4s;
   -moz-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;

@@ -12,8 +12,20 @@ class HeaderComponent extends React.Component {
         this.state = {
             height: 0,
             top: 0,
-            navbarClass: ['header-navbar', 'navbar-fixed-top']
+            navbarClass: ['header-navbar', 'navbar-fixed-top'],
+            minHeight: this.isSmallScreen() ? window.innerHeight + 'px' : 0 + 'px'
         };
+    }
+
+    isSmallScreen() {
+        return matchMedia("(min-width: 768px) and (min-height: 500px)").matches;
+    }
+    
+    collapseBrandIcon(){
+        this.setState({ ...this.state, navbarClass: ['header-navbar', 'navbar-fixed-top', 'navbar-home'] });
+        if (this.state.navbarClass.length == 3) {
+            this.setState({ ...this.state, navbarClass: ['header-navbar', 'navbar-fixed-top'] });
+        }
     }
 
     render() {
@@ -27,7 +39,7 @@ class HeaderComponent extends React.Component {
             <header className="header-background header" id="header" data-stellar-background-ratio="0.5">
                 <div className="fix header-overlay overlay-color" style={
                     {
-                        minHeight: matchMedia("(min-width: 768px) and (min-height: 500px)").matches ? window.innerHeight + 'px' : 0 + 'px'
+                        minheigth: this.state.minHeight
                     }
                 }>
 
@@ -39,7 +51,7 @@ class HeaderComponent extends React.Component {
                                         <img src={logo} className="img-responsive" alt="logo" />
                                     </AnchorLink>
                                 </Navbar.Brand>
-                                <Navbar.Toggle />
+                                <Navbar.Toggle onClick={this.collapseBrandIcon.bind(this)} />
                             </Navbar.Header>
                             <Navbar.Collapse>
                                 <Nav pullRight>
