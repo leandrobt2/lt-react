@@ -27,7 +27,7 @@ class GridImageComponent extends React.Component {
             { id: 9, src: img9, width: 2, height: 1, caption: 'Hands On' }
         ];
 
-        if (this.isSmallScreen())
+        if (!this.isDesktopScreen())
             images = images.splice(0, 6);
 
         this.state = {
@@ -40,7 +40,7 @@ class GridImageComponent extends React.Component {
         this.gotoPrevious = this.gotoPrevious.bind(this);
     }
 
-    isSmallScreen() {
+    isDesktopScreen() {
         return matchMedia("(min-width: 768px) and (min-height: 500px)").matches;
     }
 
