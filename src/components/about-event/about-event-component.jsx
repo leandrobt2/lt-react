@@ -94,7 +94,8 @@ class AboutEventComponent extends React.Component {
 
                                 {/* <!--  Start: Video Area  --> */}
                                 <div className="video">
-                                    <iframe src="https://player.vimeo.com/video/71371201?" allowFullScreen></iframe>
+                                    {/* <iframe src="https://player.vimeo.com/video/71371201?" allowFullScreen></iframe> */}
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/cMCipy7TsjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                     {/* <!--  Video Link Goes Here  --> */}
                                 </div>
                                 {/* <!--  End: Video Area  --> */}
@@ -107,7 +108,7 @@ class AboutEventComponent extends React.Component {
                             <div className="our-featured-speaker-right col-md-6 wow fadeInLeft animated" data-wow-offset="120" data-wow-duration="1.5s">
                                 <h2>SOBRE O ESPAÇO</h2>
                                 <p>
-                                    A Vila Viking tem sido construída com o máximo de cuidados e embasamento histórico, informações estas agregadas através de estudos e contatos com camaradas recriacionistas.
+                                    A Vila Viking tem sido construída com o máximo de cuidados e embasamento histórico, informações estas agregadas através de estudos e contatos com camaradas recreacionistas.
                                     A Vila estará em constante crescimento, a cada encontro teremos mais estruturas, itens para decoração e ferramentas para uso por parte dos visitantes.
                                 </p>
 

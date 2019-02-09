@@ -45,25 +45,25 @@ class ScheduleComponent extends React.Component {
                                                 <li role="presentation" className="active">
                                                     <a href="#scedule-sub-1" aria-controls="scedule-sub-1" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Inauguração</span>
-                                                        <span className="nav-time">01/01/2019 11:00am - 18:00pm</span>
+                                                        <span className="nav-time">01/04/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                                 <li role="presentation" className="">
                                                     <a href="#scedule-sub-2" aria-controls="scedule-sub-2" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Renactment VIII</span>
-                                                        <span className="nav-time">15/02/2019 11:00am - 18:00pm</span>
+                                                        <span className="nav-time">15/05/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                                 <li role="presentation" className="">
                                                     <a href="#scedule-sub-3" aria-controls="scedule-sub-3" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">A Era Vikings (793–1066 AD)</span>
-                                                        <span className="nav-time">30/03/2019 11:00am - 18:00pm</span>
+                                                        <span className="nav-time">30/06/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                                 <li role="presentation" className="">
                                                     <a href="#scedule-sub-4" aria-controls="scedule-sub-4" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Renactment VIX</span>
-                                                        <span className="nav-time">15/05/2019 11:00am - 18:00pm</span>
+                                                        <span className="nav-time">15/07/2019 11:00am - 18:00pm</span>
                                                     </a>
                                                 </li>
                                             </ul>

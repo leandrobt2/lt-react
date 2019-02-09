@@ -14,7 +14,7 @@ module.exports = {
     entry: path.join(__dirname, "/../src/index.jsx"),
     output: {
         path: outputPath,
-        filename: "bundle.js",
+        filename: (+new Date()).toString() + "bundle.js",
         sourceMapFilename: "bundle.map",
         publicPath: '/'
     },
