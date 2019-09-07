@@ -1,22 +1,21 @@
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
+console.log('__dirname',__dirname);
+import img1 from '../../assets/image/grid-image/1.jpg';
+import img2 from '../../assets/image/grid-image/2.jpg';
+import img3 from '../../assets/image/grid-image/3.jpg';
+import img5 from '../../assets/image/grid-image/5.jpg';
+import img6 from '../../assets/image/grid-image/6.jpg';
+import img7 from '../../assets/image/grid-image/7.jpg';
+import img8 from '../../assets/image/grid-image/8.jpg';
+import img9 from '../../assets/image/grid-image/9.jpg';
 
-import img1 from './images/1.jpg';
-import img2 from './images/2.jpg';
-import img3 from './images/3.jpg';
-import img4 from './images/4.jpg';
-import img5 from './images/5.jpg';
-import img6 from './images/6.jpg';
-import img7 from './images/7.jpg';
-import img8 from './images/8.jpg';
-import img9 from './images/9.jpg';
-
-import img10 from './images/10.jpg';
-import img11 from './images/11.jpg';
-import img12 from './images/12.jpg';
-import img13 from './images/13.jpg';
-import img14 from './images/14.jpg';
+import img10 from '../../assets/image/grid-image/10.jpg';
+import img11 from '../../assets/image/grid-image/11.jpg';
+import img12 from '../../assets/image/grid-image/12.jpg';
+import img13 from '../../assets/image/grid-image/13.jpg';
+import img14 from '../../assets/image/grid-image/14.jpg';
 
 
 class GridImageComponent extends React.Component {

@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackImagesResizer = require('webpack-images-resizer');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 
 const outputPath = path.join(__dirname, "../dist");
@@ -9,6 +10,9 @@ const outputAssetPath = path.join(outputPath, "/assets");
 const outputAssetCssPath = path.join(outputAssetPath, "/css");
 const outputAssetJsPath = path.join(outputAssetPath, "/js");
 const outputAssetImgPath = path.join(outputAssetPath, "/image");
+
+var imageList = [];
+imageList.push({src: path.resolve(__dirname, 'assets/image'), dest: outputAssetImgPath});
 
 module.exports = {
     entry: path.join(__dirname, "/../src/index.jsx"),
@@ -77,9 +81,10 @@ module.exports = {
             template: path.join(__dirname, '/template.html')
         }),
         new CopyWebpackPlugin([
-            { from: 'src/assets/image/fav128.ico', to: outputAssetImgPath }
-            //{ from: 'node_modules/bootstrap/dist/css/bootstrap.min.css', to: outputAssetCssPath }
+            { from: 'src/assets/image/fav128.ico', to: outputAssetImgPath },
+            { from: 'src/assets', to: outputAssetImgPath }
         ]),
+        //new WebpackImagesResizer(imageList, {width: "50%"})
         // new HtmlWebpackIncludeAssetsPlugin({
         //     assets: ['assets/js/bootstrap.min.js', 'assets/css/bootstrap.min.css'],
         //     append: false

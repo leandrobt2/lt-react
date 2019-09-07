@@ -1,5 +1,5 @@
 import React from 'react';
-import faqImg from '../../assets/image/3.jpg';
+import faqImg from '../../assets/image/grid-image/3.jpg';
 
 class FaqComponent extends React.Component {
     constructor() {
