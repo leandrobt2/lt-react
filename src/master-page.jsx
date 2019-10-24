@@ -23,10 +23,10 @@ class MasterPage extends React.Component {
                 <AboutEventComponent />
                 
                 <GridImageComponent />
-                <MessageComponent />
+                {/* <MessageComponent /> */}
                 <PeopleComponent />
                 <ScheduleComponent />
-                <PriceComponent />
+                {/* <PriceComponent /> */}
                 
                 <PartnerComponent />
                 <FaqComponent />

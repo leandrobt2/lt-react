@@ -3,7 +3,7 @@
 /***************************************************************************/
 @media (max-width: 767px) {
   .about-background-image .background-right {
-    background-image: url('../image/grid-image/5.jpg');
+    /* background-image: url('../image/grid-image/5.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     padding-left: 0;

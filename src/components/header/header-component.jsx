@@ -20,8 +20,8 @@ class HeaderComponent extends React.Component {
     isSmallScreen() {
         return matchMedia("(min-width: 768px) and (min-height: 500px)").matches;
     }
-    
-    collapseBrandIcon(){
+
+    collapseBrandIcon() {
         this.setState({ ...this.state, navbarClass: ['header-navbar', 'navbar-fixed-top', 'navbar-home'] });
         if (this.state.navbarClass.length == 3) {
             this.setState({ ...this.state, navbarClass: ['header-navbar', 'navbar-fixed-top'] });
@@ -65,9 +65,9 @@ class HeaderComponent extends React.Component {
                                     <div style={{ float: 'left' }}>
                                         <AnchorLink href='#scheduleId' style={anchorLinkStyle}>Agenda</AnchorLink>
                                     </div>
-                                    <div style={{ float: 'left' }}>
+                                    {/* <div style={{ float: 'left' }}>
                                         <AnchorLink href='#priceId' style={anchorLinkStyle}>Preço</AnchorLink>
-                                    </div>
+                                    </div> */}
                                     <div style={{ float: 'left' }}>
                                         <AnchorLink href='#faqId' style={anchorLinkStyle}>FAQ</AnchorLink>
                                     </div>
@@ -87,7 +87,7 @@ class HeaderComponent extends React.Component {
                                 position: 'relative'
                             }
                         }>
-                            <Countdown date={new Date(1555892835718)} renderer={renderer} />
+                            <Countdown date={new Date(1573862400000)} renderer={renderer} />
 
                             <div className="clearfix">
                             </div>
@@ -97,7 +97,7 @@ class HeaderComponent extends React.Component {
                                     <b>CONHEÇA A PRIMEIRA<br />VILA VIKING DO BRASIL</b>
                                     <br />
                                     <div>
-                                        INAUGURAÇÃO (Em breve)
+                                        Evento Aberto 16/11
                                     </div>
                                 </h1>
                             </div>
@@ -112,7 +112,8 @@ class HeaderComponent extends React.Component {
 
                                 <div className="buy-tricket btn-scroll">
                                     <div className="btn-group">
-                                        <AnchorLink href='#priceId' className="btn-fill btn-standard btn btn-cus" style={anchorLinkStyle}>Garanta seu ingresso aqui</AnchorLink>
+                                        <a target="_blank" href="https://www.facebook.com/VilaVikingBrasil/photos/a.515067352257318/763788494051868/?type=3&amp;theater" className="btn-fill btn-standard btn btn-cus" style={{ position: 'relative', display: 'block', padding: '15px', color: 'rgb(157, 157, 157)' }}>Garanta seu ingresso aqui</a>
+                                        {/* <AnchorLink target="_blank" href='https://www.facebook.com/VilaVikingBrasil/photos/a.515067352257318/763788494051868/?type=3&theater' className="btn-fill btn-standard btn btn-cus" style={anchorLinkStyle}>Garanta seu ingresso aqui</AnchorLink> */}
                                     </div>
                                 </div>
                             </div>
