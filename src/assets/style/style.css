@@ -457,7 +457,6 @@ h3 {
   overflow: hidden;
 }
 .about-background-image .background-right {
-  /* background-image: url('../image/grid-image/5.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: 0;
@@ -503,8 +502,6 @@ h3 {
  *  
  */
 .scedule-background {
-  /* background: url('../image/grid-image/2.jpg') top center fixed; */
-  /* background: url('../../../../all-file/images/bg-3.jpg') top center fixed; */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -792,7 +789,7 @@ h3 {
   background: #f5f6f8;
 }
 .collapse-left {
-  height: 655px;
+  height: 900px;
   overflow: hidden;
 }
 .collapse-right .panel {

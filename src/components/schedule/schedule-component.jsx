@@ -1,21 +1,37 @@
 import React from "react";
 import { Nav, NavItem, Button } from 'react-bootstrap';
+import ImageHelper from '../../helper/image-helper';
 
 class ScheduleComponent extends React.Component {
+    isPortrait() {
+        return matchMedia("(orientation: portrait)").matches;
+    }
+
     state = {
         display: ""
     }
+
+    imageUrl = null;
 
     constructor() {
         super();
         this.dropDownClick = this.dropDownClick.bind(this);
         this.teste = this.teste.bind(this);
+
+        if (this.isPortrait()) {
+            this.imageUrl = ImageHelper.getRandonImages(1, 'portrait', 'm')[0].url;
+        } else {
+            this.imageUrl = ImageHelper.getRandonImages(1, 'landscape', 'l')[0].url;
+        }
     }
 
     render() {
+        
+       
+
         return (
 
-            <section className="scedule-background scedule" id="scheduleId">
+            <section className="scedule-background scedule" id="scheduleId" style={{ background: "url('" + this.imageUrl + "')" }}>
                 <div className="fix overlay-color">
 
                     <div className="container">
@@ -43,12 +59,12 @@ class ScheduleComponent extends React.Component {
 
                                             <ul className="nav nav-cus col-md-4" role="tablist" id="nav-ul-scedule-0" style={{ display: this.state.display }}>
                                                 <li role="presentation" className="active">
-                                                    <a href="#scedule-sub-1" aria-controls="scedule-sub-1" role="tab" data-toggle="tab" onClick={this.teste}>
+                                                    <a href="#scedule-sub-0" aria-controls="scedule-sub-0" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Pre-Inauguração</span>
                                                         <span className="nav-time">16/11/2019 11:00am - 16:00pm</span>
                                                     </a>
                                                 </li>
-                                                <li role="presentation">
+                                                <li role="presentation" className="">
                                                     <a href="#scedule-sub-1" aria-controls="scedule-sub-1" role="tab" data-toggle="tab" onClick={this.teste}>
                                                         <span className="nav-header">Inauguração</span>
                                                         <span className="nav-time">01/04/2020 11:00am - 16:00pm</span>
@@ -97,7 +113,7 @@ Comida e bebida inclusas, sendo que os convidados irão se alimentarem juntos ao
 Obs.: Não faremos uso de energia elétrica nem wi-fi nesses primeiros encontros..</p>
 
                                             </div>
-                                            <div role="tabpanel" className="tab-pane active wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-1">
+                                            <div role="tabpanel" className="tab-pane wow fadeIn animated" data-wow-offset="10" data-wow-duration="1.5s" id="scedule-sub-1">
 
                                                 <h3>Inauguração</h3>
                                                 <p>Evento não confirmado, sujeito a alteração de data</p>

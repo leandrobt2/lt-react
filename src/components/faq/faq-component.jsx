@@ -1,5 +1,6 @@
 import React from 'react';
-import faqImg from '../../assets/image/grid-image/3.jpg';
+import ImageHelper from '../../helper/image-helper';
+//import faqImg from '../../assets/image/grid-image/3.jpg';
 
 class FaqComponent extends React.Component {
     constructor() {
@@ -60,7 +61,7 @@ class FaqComponent extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="collapse-left col-sm-12 col-md-4 col-lg-4 hidden-xs hidden-sm wow fadeInUp animated" data-wow-offset="10" data-wow-duration="1.5s">
-                            <img src={faqImg} alt="" className="" />
+                            <img src={ImageHelper.getRandonImages(1, 'portrait', 'm')[0].url} alt="" className="" />
                         </div>
 
                         <div className="collapse-right col-sm-12 col-md-offset-1 col-md-7 col-lg-offset-1 col-lg-7">

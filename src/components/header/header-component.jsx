@@ -3,8 +3,12 @@ import logo from '../../assets/image/logo.png';
 import Countdown from 'react-countdown-now';
 import { Navbar, Nav, NavItem, Button } from 'react-bootstrap';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import ImageHelper from '../../helper/image-helper';
 
 class HeaderComponent extends React.Component {
+
+    imageUrl = null;
+
     constructor(props) {
         super(props);
         this.handleScroll = this.handleScroll.bind(this);
@@ -15,6 +19,17 @@ class HeaderComponent extends React.Component {
             navbarClass: ['header-navbar', 'navbar-fixed-top'],
             minHeight: this.isSmallScreen() ? window.innerHeight + 'px' : 0 + 'px'
         };
+
+        
+        if (this.isPortrait()) {
+            this.imageUrl = ImageHelper.getRandonImages(1, 'portrait', 'm')[0].url;
+        } else {
+            this.imageUrl = ImageHelper.getRandonImages(1, 'landscape', 'xl')[0].url;
+        }
+    }
+
+    isPortrait() {
+        return matchMedia("(orientation: portrait)").matches;
     }
 
     isSmallScreen() {
@@ -35,8 +50,9 @@ class HeaderComponent extends React.Component {
             padding: "15px 15px",
             color: '#9d9d9d'
         };
+
         return (
-            <header className="header-background header" id="header" data-stellar-background-ratio="0.5">
+            <header className="header-background header" id="header" data-stellar-background-ratio="0.5" style={{ background: "url('" + this.imageUrl + "')" }}>
                 <div className="fix header-overlay overlay-color" style={
                     {
                         minheigth: this.state.minHeight
