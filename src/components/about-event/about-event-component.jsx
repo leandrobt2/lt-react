@@ -90,7 +90,7 @@ class AboutEventComponent extends React.Component {
                             <div className="background-left col-sm-12 col-md-6"></div>
 
                             {/* <!-- About-Our-Event Overlay background Right Area  --> */}
-                            <div className="bg-img-3 background-right col-sm-12 col-md-6" style={{ background: "url('" + ImageHelper.getRandonImages(1, this.isPortrait() ? 'portrait' : 'landscape', 'm')[0].url + "')" }}>
+                            <div className="bg-img-3 background-right col-sm-12 col-md-6" style={{ background: "url('" + new ImageHelper().getRandonImages(1, this.isPortrait() ? 'portrait' : 'landscape', 'm')[0].url + "')" }}>
                                 <div className="background-right-overlay-color"></div>
                             </div>
 

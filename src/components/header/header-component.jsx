@@ -22,9 +22,9 @@ class HeaderComponent extends React.Component {
 
         
         if (this.isPortrait()) {
-            this.imageUrl = ImageHelper.getRandonImages(1, 'portrait', 'm')[0].url;
+            this.imageUrl = new ImageHelper().getRandonImages(1, 'portrait', 'm')[0].url;
         } else {
-            this.imageUrl = ImageHelper.getRandonImages(1, 'landscape', 'xl')[0].url;
+            this.imageUrl = new ImageHelper().getRandonImages(1, 'landscape', 'xl')[0].url;
         }
     }
 

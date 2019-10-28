@@ -8,21 +8,24 @@ class GridImageComponent extends React.Component {
         super();
 
         var i = 0;
-        let images = ImageHelper.getRandonImages(23, undefined, this.isDesktopScreen() ? 'l' : 's').map(m => {
-            return {
-                src: m.url,
-                id: i++,
-                width: m.typeId == 'portrait' ? 2 : 3,
-                height: m.typeId == 'portrait' ? 3 : 2
-            };
+        let __images = new ImageHelper().getRandonImages(23, undefined, this.isDesktopScreen() ? 'l' : 's').map(m => {
+            if (m)
+                return {
+                    src: m.url,
+                    id: i++,
+                    width: m.typeId == 'portrait' ? 2 : 3,
+                    height: m.typeId == 'portrait' ? 3 : 2
+                };
         });
 
+        __images = __images.filter(m => m !== undefined);
+
         if (!this.isDesktopScreen())
-            images = images.splice(0, 6);
+            __images = __images.splice(0, 6);
 
         this.state = {
             currentImage: 0,
-            images
+            images2: __images
         };
         this.closeLightbox = this.closeLightbox.bind(this);
         this.openLightbox = this.openLightbox.bind(this);
@@ -64,8 +67,8 @@ class GridImageComponent extends React.Component {
                         <div className="wow fadeInDown animated" data-wow-offset="120" data-wow-duration="1.5s">
                             <h2>Galeria</h2>
                         </div>
-                        <Gallery photos={this.state.images} onClick={this.openLightbox} />
-                        <Lightbox images={this.state.images}
+                        <Gallery photos={this.state.images2} onClick={this.openLightbox} />
+                        <Lightbox images={this.state.images2}
                             onClose={this.closeLightbox}
                             onClickPrev={this.gotoPrevious}
                             onClickNext={this.gotoNext}

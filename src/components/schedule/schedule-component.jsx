@@ -19,9 +19,9 @@ class ScheduleComponent extends React.Component {
         this.teste = this.teste.bind(this);
 
         if (this.isPortrait()) {
-            this.imageUrl = ImageHelper.getRandonImages(1, 'portrait', 'm')[0].url;
+            this.imageUrl = new ImageHelper().getRandonImages(1, 'portrait', 'm')[0].url;
         } else {
-            this.imageUrl = ImageHelper.getRandonImages(1, 'landscape', 'l')[0].url;
+            this.imageUrl = new ImageHelper().getRandonImages(1, 'landscape', 'l')[0].url;
         }
     }
 
