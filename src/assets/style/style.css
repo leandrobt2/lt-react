@@ -777,7 +777,15 @@ h3 {
 .sponsore-body img {
   margin: auto;
   width: 150px;
+  border-radius: 45px;
+  cursor: pointer;
 }
+
+.flex-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*
  ********************************
  *

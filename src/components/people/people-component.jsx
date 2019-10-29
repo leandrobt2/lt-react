@@ -12,29 +12,26 @@ class PeopleComponent extends React.Component {
         sliders: [
             {
                 key: '1',
-                name: 'Rafael',
-                desc: 'Co-Founder',
-                fb: '',
-                twitter: '',
-                skype: '',
-                image: person1
-            },
-            {
-                key: '2',
                 name: 'Paulo',
                 desc: 'Co-Founder',
                 fb: '',
                 twitter: '',
-                skype: '',
                 image: person2
+            },
+            {
+                key: '2',
+                name: 'Rafael',
+                desc: 'Co-Founder',
+                fb: '',
+                twitter: '',
+                image: person1
             },
             {
                 key: '3',
                 name: 'Leandro',
                 desc: 'Co-Founder',
                 fb: 'https://www.facebook.com/leandrobt2',
-                twitter: '',
-                skype: '',
+                twitter: 'https://twitter.com/leandro_bt2',
                 image: person3
             },
             {
@@ -43,7 +40,6 @@ class PeopleComponent extends React.Component {
                 desc: 'Co-Founder',
                 fb: '',
                 twitter: '',
-                skype: '',
                 image: person4
             }
         ]
@@ -51,29 +47,31 @@ class PeopleComponent extends React.Component {
 
     render() {
         var settings = {
-            dots: true,
+            dots: false,
             slidesToShow: 4,
             slidesToScroll: 1,
+            centerMode: false,
+            autoplay: true,
             responsive: [
                 {
                     breakpoint: 1000,
                     settings: {
                         slidesToShow: 3,
-                        dots: true
+                        dots: false
                     }
                 },
                 {
                     breakpoint: 800,
                     settings: {
                         slidesToShow: 2,
-                        dots: true
+                        dots: false
                     }
                 },
                 {
                     breakpoint: 550,
                     settings: {
                         slidesToShow: 1,
-                        dots: true
+                        dots: false
                     }
                 }
             ]
@@ -93,13 +91,11 @@ class PeopleComponent extends React.Component {
                                     this.state.sliders.map(slider => (
                                         <div className="item-slider" key={slider.key}>
                                             <div className="view view-first">
-                                                <img src={slider.image} key={"i"+slider.key} alt="" className="item-slider-img" />
+                                                <img src={slider.image} key={"i" + slider.key} alt="" className="item-slider-img" />
                                                 <div className="mask">
                                                     <ul className="nav">
-                                                        <li><a href={slider.fb} target="_blank" key={"fb"+slider.key}> <i className="fa facebook fa-facebook"></i> </a></li>
+                                                        <li><a href={slider.fb} target="_blank" key={"fb" + slider.key}> <i className="fa facebook fa-facebook"></i> </a></li>
                                                         <li><a href="#"> <i className="fa twitter fa-twitter"></i> </a></li>
-                                                        {/* <li><a href="#"> <i className="fa skype fa-skype"></i> </a></li>
-                                                        <li><a href="#"> <i className="fa rss fa-rss "></i> </a></li> */}
                                                     </ul>
 
                                                 </div>

@@ -38,7 +38,7 @@ class AboutEventComponent extends React.Component {
                             {/* <!-- Start: About-Our-Event Right Area  --> */}
                             <div className="about-our-event-right col-md-offset-1 col-md-6 wow fadeInRight animated" data-wow-offset="120" data-wow-duration="1.5s">
                                 <div className="container-fluid">
-                                    <div className="row about-our-event-right-body">
+                                    <div className="row about-our-event-right-body flex-content">
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
                                             <span className="counter style-all">2000</span>
                                             <span className="title">m²</span>
