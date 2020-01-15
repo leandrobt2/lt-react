@@ -3,6 +3,7 @@ import React from "react";
 import Preloader from './components/preloader/preloader-component';
 import HeaderComponent from './components/header/header-component';
 import AboutEventComponent from './components/about-event/about-event-component';
+import AboutEventComponent2 from './components/about-event/about-event-component2';
 import FooterComponent from './components/footer/footer-component';
 import ContactUsComponent from './components/contact-us/contact-us-component';
 import ScheduleComponent from './components/schedule/schedule-component';
@@ -20,19 +21,20 @@ class MasterPage extends React.Component {
                 <Preloader />
                 <HeaderComponent />
                 <AboutEventComponent />
-                
+
                 <GridImageComponent />
                 {/* <MessageComponent /> */}
-                
+
                 <PeopleComponent />
                 <ScheduleComponent />
-                
+
                 {/* <PriceComponent /> */}
-                
+
                 <PartnerComponent />
                 <FaqComponent />
-                
+                <AboutEventComponent2 />
                 <ContactUsComponent />
+
                 <FooterComponent />
             </div>
         )

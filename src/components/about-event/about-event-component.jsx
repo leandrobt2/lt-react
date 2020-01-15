@@ -40,7 +40,7 @@ class AboutEventComponent extends React.Component {
                                 <div className="container-fluid">
                                     <div className="row about-our-event-right-body flex-content">
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">2000</span>
+                                            <span className="counter style-all">4000</span>
                                             <span className="title">m²</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
@@ -48,7 +48,7 @@ class AboutEventComponent extends React.Component {
                                             <span className="title">Vila Viking do BR</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">100</span>
+                                            <span className="counter style-all">150+</span>
                                             <span className="title">Pessoas</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
@@ -68,12 +68,12 @@ class AboutEventComponent extends React.Component {
                                             <span className="title">Carpintaria</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">5</span>
+                                            <span className="counter style-all">10</span>
                                             <span className="title">Mercadores</span>
                                         </div>
                                         <div className="col-md-4 col-sm-4 col-xs-4 col-lg-4 background time">
-                                            <span className="counter style-all">2</span>
-                                            <span className="title">Artesões</span>
+                                            <span className="counter style-all">1</span>
+                                            <span className="title">Fundição</span>
                                         </div>
                                     </div>
                                 </div>

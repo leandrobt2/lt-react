@@ -21,7 +21,7 @@ class GridImageComponent extends React.Component {
         __images = __images.filter(m => m !== undefined);
 
         if (!this.isDesktopScreen())
-            __images = __images.splice(0, 12);
+            __images = __images.splice(0, 18);
 
         this.state = {
             currentImage: 0,

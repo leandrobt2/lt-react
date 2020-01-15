@@ -7,11 +7,11 @@ class FaqComponent extends React.Component {
         super();
         this.state = {
             faqs: [
-                {
-                    id: 1,
-                    question: "Qual previsão de Inauguração?",
-                    answer: "Ainda não temos como afirmar uma data devido aos tipos de estruturas que estamos construindo, como são estruturas históricas nunca antes feitas por nós, algumas levam mais tempo que as outras, mas avisaremos com antecedência"
-                },
+                // {
+                //     id: 1,
+                //     question: "Qual previsão de Inauguração?",
+                //     answer: "Ainda não temos como afirmar uma data devido aos tipos de estruturas que estamos construindo, como são estruturas históricas nunca antes feitas por nós, algumas levam mais tempo que as outras, mas avisaremos com antecedência"
+                // },
                 {
                     id: 2,
                     question: "Será espaço apenas para eventos?",
@@ -42,15 +42,34 @@ class FaqComponent extends React.Component {
                     question: "Há chalés para Passarmos uma temporada?",
                     answer: "Em nosso projeto uma das etapas é a construção de chalés (cabanas históricas) para acomodarmos aqueles que querem passar mais de um dia no espaço, claro, isso sendo devidamente agendado, especialmente porque não vamos dispor de muitas cabanas, preservando a privacidade das pessoas e mantendo a paz no espaço."
                 },
-                {
-                    id: 8,
-                    question: "Aceitam parceiros? ",
-                    answer: "Aceitamos sim, mas para isso acontecer precisamos conhecer tanto o trabalho dos parceiros, como todos os envolvidos pessoalmente. Em caso de interesse em parcerias visando comercialização de produtos, disponibilizaremos cabanas e tendas para isso, priorizando trabalhos que condizem com a proposta do espaço."
-                },
+                // {
+                //     id: 8,
+                //     question: "Aceitam parceiros? ",
+                //     answer: "Aceitamos sim, mas para isso acontecer precisamos conhecer tanto o trabalho dos parceiros, como todos os envolvidos pessoalmente. Em caso de interesse em parcerias visando comercialização de produtos, disponibilizaremos cabanas e tendas para isso, priorizando trabalhos que condizem com a proposta do espaço."
+                // },
                 {
                     id: 9,
                     question: "Como posso fazer para participar da construção e/ou outras atividades?",
                     answer: "Fiquem atentos na pagina, pois anunciaremos encontros para isso, com limite de convidados, dessa forma todos os interessados poderão ajudar na obra e outras funções no espaço, para tanto, procuraremos realizar um revezamento de pessoas."
+                },
+                {
+                    id: 10,
+                    question: "Quais são as regras que devo seguir ao participar de um evento na vila?",
+                    answer: "Proibido uso de descartáveis (copos, pratos, talheres, canudos ou qualquer outro objeto feito de plástico que venham a serem descartados); \
+                    Armamentos de ferro (espadas, machados, lanças) só serão permitidos entrarem se não tiverem fio de corte; \
+                    Combates ou mesmo treinamentos com uso de armamentos feitos de ferro necessitam de proteções por parte dos envolvidos (ex.: gambeson, luvas, cota de malha, elmo) e serão realizados sob supervisão dos recriadores; \
+                    É proibido qualquer tipo de brincadeira utilizando fogo, especialmente dentro ou próximo das cabanas; \
+                    Dentro das cabanas o fogo sempre permanecerá baixo e nunca ficará sozinho quando em uso; \
+                    Pedimos para os frequentadores evitarem assuntos relacionados a política, futebol ou qualquer coisa que possa gerar desconforto ou quebra da imersão; \
+                    Proibido qualquer tipo de pregação religiosa de forma impositiva, em nosso assentamento todos são bem vindos independente do que acreditam ou seguem, prevalecendo sempre o respeito; \
+                    É de responsabilidade de todos a conservação do espaço, tendo em vista que não se trata apenas de um local para festas, a Vila Viking será para sempre a nossa casa 😉"
+                },
+                {
+                    id:11,
+                    question:"Como é a alimentação em nossos encontros?",
+                    answer:"A alimentação durante a era viking era bem rica, mudando de acordo com a região (tipo de solo e recursos naturais). \
+                    Sendo composta principalmente por leite e seus derivados como queijo e manteiga, carne de porco, peixes, carne de caça, ensopados, ovos, frutas, cogumelos, chicória, cenouras, nabos, alface, pães, mel, nozes, cerveja, vinho, cidras... \
+                    Logo, sempre que realizarmos nossos encontros faremos receitas utilizando os mesmos recursos do período, com algumas adaptações quando necessário."
                 }
             ]
         };

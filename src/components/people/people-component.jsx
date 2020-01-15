@@ -14,9 +14,9 @@ class PeopleComponent extends React.Component {
                 key: '1',
                 name: 'Paulo',
                 desc: 'Co-Founder',
-                fb: '',
+                fb: 'https://www.facebook.com/paulocesar.fraderevuelta',
                 twitter: '',
-                image: person2
+                image: person1
             },
             {
                 key: '2',
@@ -24,7 +24,7 @@ class PeopleComponent extends React.Component {
                 desc: 'Co-Founder',
                 fb: '',
                 twitter: '',
-                image: person1
+                image: person3
             },
             {
                 key: '3',
@@ -32,7 +32,7 @@ class PeopleComponent extends React.Component {
                 desc: 'Co-Founder',
                 fb: 'https://www.facebook.com/leandrobt2',
                 twitter: 'https://twitter.com/leandro_bt2',
-                image: person3
+                image: person2
             },
             {
                 key: '4',
@@ -91,7 +91,7 @@ class PeopleComponent extends React.Component {
                                     this.state.sliders.map(slider => (
                                         <div className="item-slider" key={slider.key}>
                                             <div className="view view-first">
-                                                <img src={slider.image} key={"i" + slider.key} alt="" className="item-slider-img" />
+                                                <img src={slider.image} key={"i" + slider.key} alt="" className="item-slider-img" style={{ width: "350px", height: "auto" }} />
                                                 <div className="mask">
                                                     <ul className="nav">
                                                         <li><a href={slider.fb} target="_blank" key={"fb" + slider.key}> <i className="fa facebook fa-facebook"></i> </a></li>

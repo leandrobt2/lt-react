@@ -113,7 +113,7 @@ class HeaderComponent extends React.Component {
                                     <b>CONHEÇA A PRIMEIRA<br />VILA VIKING DO BRASIL</b>
                                     <br />
                                     <div>
-                                        Evento Aberto 16/11
+                                        {/* Evento Aberto 16/11 */}
                                     </div>
                                 </h1>
                             </div>
@@ -128,7 +128,7 @@ class HeaderComponent extends React.Component {
 
                                 <div className="buy-tricket btn-scroll">
                                     <div className="btn-group">
-                                        <a target="_blank" href="https://www.facebook.com/VilaVikingBrasil/photos/a.515067352257318/763788494051868/?type=3&amp;theater" className="btn-fill btn-standard btn btn-cus" style={{ position: 'relative', display: 'block', padding: '15px', color: 'rgb(157, 157, 157)' }}>Garanta seu ingresso aqui</a>
+                                        <a target="_blank" href="https://www.facebook.com/VilaVikingBrasil/posts/837611696669547" className="btn-fill btn-standard btn btn-cus" style={{ position: 'relative', display: 'block', padding: '15px', color: 'rgb(157, 157, 157)' }}>Garanta seu ingresso aqui</a>
                                         {/* <AnchorLink target="_blank" href='https://www.facebook.com/VilaVikingBrasil/photos/a.515067352257318/763788494051868/?type=3&theater' className="btn-fill btn-standard btn btn-cus" style={anchorLinkStyle}>Garanta seu ingresso aqui</AnchorLink> */}
                                     </div>
                                 </div>
@@ -181,7 +181,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
                 <div className="days_wrapper col-sm-12 col-xs-12 col-md-12">
                     <div className="background time">
                         <span className="counter style_all">Vila Viking Brasil</span>
-                        <span className="title">Em Breve</span>
+                        {/* <span className="title">Em Breve</span> */}
                     </div>
                 </div>
             </div>)
