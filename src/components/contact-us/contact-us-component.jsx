@@ -12,7 +12,7 @@ class ContactUsComponent extends React.Component {
 
                             <h2>Vila Viking Brasil</h2>
                             <p><span className="bold">Endereço:</span> Vila Viking Brasil - Estrada Particular - Sítio Gervásio, Juquitiba - State of São Paulo</p>
-                            <p><span className="bold">Telefone: </span><a>+55 (11) 98816-0505</a></p>
+                            <p><span className="bold">Telefone: </span><a>+55 (11) 99250-8305</a></p>
                             <p><span className="bold">Email: </span><a href="mailto:vilaviking@vilaviking.com.br">vilaviking@vilaviking.com.br</a></p>
 
                             {/* <!-- Social Icon Goes Here  --> */}

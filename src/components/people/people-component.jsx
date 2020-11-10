@@ -28,14 +28,6 @@ class PeopleComponent extends React.Component {
             },
             {
                 key: '3',
-                name: 'Leandro',
-                desc: 'Co-Founder',
-                fb: 'https://www.facebook.com/leandrobt2',
-                twitter: 'https://twitter.com/leandro_bt2',
-                image: person2
-            },
-            {
-                key: '4',
                 name: 'Agostinho',
                 desc: 'Co-Founder',
                 fb: '',
@@ -48,7 +40,7 @@ class PeopleComponent extends React.Component {
     render() {
         var settings = {
             dots: false,
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
             centerMode: false,
             autoplay: true,
