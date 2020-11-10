@@ -8,7 +8,7 @@ class GridImageComponent extends React.Component {
         super();
 
         var i = 0;
-        let __images = new ImageHelper().getRandonImages(23, undefined, this.isDesktopScreen() ? 'l' : 's').map(m => {
+        let __images = new ImageHelper().getRandonImages(35, undefined, this.isDesktopScreen() ? 'l' : 's').map(m => {
             if (m)
                 return {
                     src: m.url,
